@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户信息表单</title>
+
+
+    <style>
+      .title_my{
+        color: red;
+        font-size: 24px;
+        background-color: azure;
+      }
+
+      #college{
+        color: blue;
+        font-size: 24px;
+        background-color: azure;
+      }
+
+      .text{
+        color: green;
+      }
+    </style>
+    
+</head>
+<body>
+    <!-- <h2>用户信息表单</h2>  
+    <form action="/submit_user_info" method="post">  
+    <label for="name">姓名:</label><br>  
+    <input type="text" id="name" name="name" required><br>  
+    <label for="email">电子邮件:</label><br>  
+    <input type="email" id="email" name="email" required><br>  
+    <label for="password">密码:</label><br>  
+    <input type="password" id="password" name="password" required><br>  
+    <label for="address">地址:</label><br>  
+    <textarea id="address" name="address" rows="4" cols="50" required></textarea><br>  
+    <input type="submit" value="提交">   -->
+    <!-- </form>   -->
+
+    <h1 class="title_my">广东</h1>
+
+    <p class="text"> 广东..........................</p>
+    <button onclick="myclick()">显示计算机学院</button>
+
+    <p>请输入 1 到 10 之间的数字：</p>
+    <label for="password">输入：</label>
+    <input id="numb">
+    <button tpye="button" onclick="checknum()">提交</button>
+
+    <p id="demo">待修改</p>
+
+    <script>
+      function myclick()
+      {
+        document.getElementById("demo").innerHtml = "这是修改的"
+      }
+
+      function checknum()
+      {
+        x = document.getElementById("numb").value;
+        console.log(x)
+
+        if ( isNaN(x) || x < 1 || x > 10)
+        {
+          text = '输入错误'
+          alert('输入错误')
+        }
+        else
+        {
+          text = '输入正确'
+          alert('输入正确')
+        }
+        document.getElementById("demo").innerHTML = text
+      }
+
+
+    </script>
+</body>
+</html>
