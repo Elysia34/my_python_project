@@ -1,0 +1,47 @@
+{% extends 'user/base.html' %}
+{% block title %}
+    商品发布
+{% endblock %}
+
+{% block head %}
+
+
+{% endblock %}
+
+
+{% block main %}
+    <div class="inner_body">
+        <form action="/add_product" id="product_form" method="post" enctype="multipart/form-data">
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">商品类别</span>
+                <div class="dropdown menu_cate">
+                    <button class="btn btn-default dropdown-toggle" type="button"
+                            id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="true">
+
+                        <span class="one_cate">一级类别</span>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        {% for category in categorys %}
+                            <li id="{{ category.id }}" class="one_li"><a
+                                    href="#">{{ category.cname }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon2">商品名称</span>
+                <input type="text" maxlength="50" id="pname"
+                       class="form-control must_input_product" name="pname"
+                       placeholder="商品名称" aria-describedby="basic-addon1">
+            </div>
+
+            {#<button type="submit" class="btn btn-success fb" style="width: 100%;"
+                    onclick="checkAll()">发布商品
+            </button>
+            #}
+             <input type="submit" class="btn btn-success fb" style="width: 100%;" value="发布商品">
+        </form>
+    </div>
+{% endblock %}

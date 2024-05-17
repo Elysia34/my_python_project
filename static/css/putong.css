@@ -14,11 +14,11 @@
 }
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?7yi5yk');
-  src:  url('fonts/icomoon.eot?7yi5yk#iefix') format('embedded-opentype'),
-  url('fonts/icomoon.ttf?7yi5yk') format('truetype'),
-  url('fonts/icomoon.woff?7yi5yk') format('woff'),
-  url('fonts/icomoon.svg?7yi5yk#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot');
+  src:  url('fonts/icomoon.eot') format('embedded-opentype'),
+  url('fonts/icomoon.ttf') format('truetype'),
+  url('fonts/icomoon.woff') format('woff'),
+  url('fonts/icomoon.svg') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -319,17 +319,17 @@ button:hover{
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: url(/images/轮播图1.webp);
+  background-image: url(../../../static/image/小米手机.jpeg);
   background-size: 1226px 460px;
   background-repeat: no-repeat;
   animation:10s movie infinite;
 }
 @keyframes movie {
-  0%{background-image: url(/images/轮播图1.webp)}
-  25%{background-image: url(/images/轮播图2.jpg)}
-  50%{background-image: url(/images/轮播图1.webp)}
-  75%{background-image: url(/images/轮播图2.jpg)}
-  100%{background-image: url(/images/轮播图1.webp)}
+  0%{background-image: url(../../../static/image/小米手机.jpeg)}
+  25%{background-image: url(../../../static/image/运动鞋.jpg)}
+  50%{background-image: url(../../../static/image/护肤品.jpg)}
+  75%{background-image: url(../../../static/image/背包.jpg)}
+  100%{background-image: url(../../../static/image/大衣.jfif)}
 }
 .button-right{
   position: absolute;
@@ -529,7 +529,7 @@ button:hover{
 /* 商品区 */
 .m{
   width: 100%;
-  height: 2380px;
+  height: 1700px;
   background: linear-gradient(to bottom, #f5f5f5, #f9f9f9);
   overflow: hidden;
 }

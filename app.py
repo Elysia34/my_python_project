@@ -17,8 +17,16 @@ def index():
     sql = 'SELECT * FROM product'
     comment_products = db.fetchall(sql)  # 获取多条记录
 
+    db = MysqlUtil()
+    sql = 'SELECT * FROM category_second'
+    category_second = db.fetchall(sql)  # 获取多条记录
+
+    db = MysqlUtil()
+    sql = 'SELECT * FROM product'
+    product = db.fetchall(sql)  # 获取多条记录
+
     return render_template("/user/index.html", categorys=categorys, comment_products=comment_products,
-                           hot_products=comment_products, new_products=comment_products)
+                           all_categorys=category_second, products=product)
 
 
 @app.route('/bashboard')
@@ -68,7 +76,7 @@ def add_product():
         id = "%20d" % random.randint(0,1000000000)
         # images_path = "/static/product_test/2.jpg"
         db = MysqlUtil() # 实例化数据库操作类
-        sql = "INSERT INTO product_temp(id,pname,old_price,new_price,counts,images) \
+        sql = "INSERT INTO product(id,pname,old_price,new_price,counts,images) \
                VALUES ('%s', '%s', '%s','%s','%s','%s')" % (id,pname,old_price,new_price,counts,images_path) # 插入数据的SQL语句
         db.insert(sql)
         return redirect(url_for('bashboard'))
@@ -78,7 +86,7 @@ def add_product():
 @app.route('/delete_product/<string:id>', methods=['POST'])
 def delete_product(id):
     db = MysqlUtil() # 实例化数据库操作类
-    sql = "DELETE FROM product_temp WHERE id = '%s'" % (id) # 执行删除笔记的SQL语句
+    sql = "DELETE FROM product WHERE id = '%s'" % (id) # 执行删除笔记的SQL语句
     db.delete(sql) # 删除数据库
     return redirect(url_for('bashboard'))
 

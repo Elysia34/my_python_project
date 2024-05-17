@@ -1,9 +1,31 @@
-{% extends 'user/base.html' %}
-{% block title %}
-    商品发布
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品发布-广科二手交易市场</title>
 
-{% block head %}
+    <!--[if IE]>
+    <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="{{ url_for('static',filename='js/jquery-3.1.1.min.js') }}"></script>
+    <link href="{{ url_for('static',filename='css/base.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ url_for('static',filename='sweetalert/sweetalert.css') }}" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link href="{{ url_for('static',filename='css/slider.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ url_for('static',filename='css/common.css') }}" rel="stylesheet" type="text/css"/>
+    <script src="{{ url_for('static',filename='js/base.js') }}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css">
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static',filename='sweetalert/sweetalert.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='sweetalert/xlalert.js') }}"></script>
+    <link href="{{ url_for('static',filename='circle/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ url_for('static',filename='circle/circle.css') }}" rel="stylesheet" type="text/css"/>
+
     <link href="{{ url_for('static',filename='css/index.css') }}" rel="stylesheet" type="text/css"/>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/ssi-uploader.css') }}">
@@ -16,12 +38,10 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='img_trans/default.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='img_trans/demo.css',v=2) }}">
     <script type="text/javascript" src="{{ url_for('static',filename='js/dotdotdot.js') }}"></script>
+</head>
+<body>
 
-{% endblock %}
-
-
-
-{% block main %}
+<div id="main_show_id" class="main_show">
     <div class="inner_body">
         <form action="/add_product" id="product_form" method="post" enctype="multipart/form-data">
             <div class="input-group">
@@ -97,4 +117,6 @@
              <input type="submit" class="btn btn-success fb" style="width: 100%;" value="发布商品">
         </form>
     </div>
-{% endblock %}
+</div>
+</body>
+</html>
