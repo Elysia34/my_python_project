@@ -21,7 +21,8 @@ pip install –r requirements.txt
 <br>
 安装教程
 <br>
-##[1]1.导出数据库sql文件(非必要)
+##[1]
+1.导出数据库sql文件(非必要)
 <br>
 ##[ ]2.新建数据库zhy_shop
 <br>  
