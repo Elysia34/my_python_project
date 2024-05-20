@@ -47,13 +47,13 @@ pip install –r requirements.txt
 <br>
 <img src="static/md_img/4.JPG">
 <br>
-2.	商品管理，以及商品来自数据库管理
+**2.	商品管理，以及商品来自数据库管理**
 <br>
 <img src="static/md_img/6.JPG">
 <img src="static/md_img/7.JPG">
 <img src="static/md_img/8.JPG">
 <br>
-3.	商品可视化管理
+**3.	商品可视化管理**
 <br>
 <img src="static/md_img/9.JPG">
 <br>
